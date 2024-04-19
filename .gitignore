@@ -1,0 +1,18 @@
+# Ignorar directorio del entorno virtual
+venv/
+ECHO est  activado.
+# Ignorar archivos de configuraci¢n de Windows
+Thumbs.db
+Desktop.ini
+ECHO est  activado.
+# Ignorar archivos de compilaci¢n de Python
+__pycache__/
+*.py[cod]
+*$py.class
+ECHO est  activado.
+
+ECHO est  activado.
+# Ignorar archivos de datos personales
+.env
+.env.local
+.env.local
