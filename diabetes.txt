@@ -1,0 +1,67 @@
+ 
+'Load and return the diabetes dataset (regression).
+
+Samples total    442
+Dimensionality   10
+Features         real, -.2 < x < .2
+Targets          integer 25 - 346
+
+.. note::
+The meaning of each feature (i.e. `feature_names`) might be unclear
+(especially for `ltg`) as the documentation of the original dataset is
+not explicit. We provide information that seems correct in regard with
+the scientific literature in this field of research.
+
+Read more in the :ref:`User Guide <diabetes_dataset>`.
+
+Parameters
+
+return_X_y : bool, default=False\n        If True, returns ``(data, target)`` instead of a Bunch object.
+See below for more information about the `data` and `target` object.
+
+.. versionadded:: 0.18
+
+as_frame : bool, default=False
+If True, the data is a pandas DataFrame including columns with
+appropriate dtypes (numeric). The target is
+a pandas DataFrame or Series depending on the number of target columns.
+If `return_X_y` is True, then (`data`, `target`) will be pandas
+DataFrames or Series as described below.
+
+.. versionadded:: 0.23
+
+scaled : bool, default=True
+If True, the feature variables are mean centered and scaled by the
+standard deviation times the square root of `n_samples`.
+If False, raw data is returned for the feature variables.
+
+.. versionadded:: 1.1
+
+Returns
+-------
+data : :class:`~sklearn.utils.Bunch`
+Dictionary-like object, with the following attributes.
+
+data : {ndarray, dataframe} of shape (442, 10)
+The data matrix. If `as_frame=True`, `data` will be a pandas
+DataFrame.
+target: {ndarray, Series} of shape (442,)
+The regression target. If `as_frame=True`, `target` will be
+a pandas Series.
+feature_names: list
+The names of the dataset columns.
+frame: DataFrame of shape (442, 11)
+Only present when `as_frame=True`. DataFrame with `data` and
+`target`.
+
+.. versionadded:: 0.23
+DESCR: str
+The full description of the dataset.
+data_filename: str
+The path to the location of the data.
+target_filename: str
+The path to the location of the target.
+
+(data, target) : tuple if ``return_X_y`` is True
+Returns a tuple of two ndarray of shape (n_samples, n_features)
+A 2D array with each row representing one sample and each column\n        representing the features and/or target of a given sample.\n\n        .. versionadded:: 0.18\n\n    Examples\n    --------\n    >>> from sklearn.datasets import load_diabetes\n    >>> diabetes = load_diabetes()\n    >>> diabetes.target[:3]\n    array([151.,  75., 141.])\n    >>> diabetes.data.shape\n    (442, 10)\n    '
