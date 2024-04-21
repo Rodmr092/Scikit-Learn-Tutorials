@@ -1,18 +1,31 @@
-# Ignorar directorio del entorno virtual
+# Directorios de entorno virtual
 venv/
-ECHO est  activado.
-# Ignorar archivos de configuraci¢n de Windows
-Thumbs.db
-Desktop.ini
-ECHO est  activado.
-# Ignorar archivos de compilaci¢n de Python
+scikitlearn_tutorial_venv/
+
+# Archivos de byte compilados de Python
 __pycache__/
 *.py[cod]
-*$py.class
-ECHO est  activado.
 
-ECHO est  activado.
-# Ignorar archivos de datos personales
-.env
-.env.local
-.env.local
+# Archivos de paquetes
+*.egg-info/
+dist/
+
+# Archivos de configuración del IDE (depende del IDE que uses)
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+
+# Archivos de notebooks si los resultados no son necesarios en VCS
+*.ipynb_checkpoints/
+
+# Archivos de salida del modelo (si son muy grandes o generados automáticamente)
+*.pkl
+*.joblib
+
+# Archivos de logs
+*.log
